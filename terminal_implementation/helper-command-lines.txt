@@ -1,0 +1,3 @@
+### Run Executable File ###
+chmod +x file.sh
+./file.sh
