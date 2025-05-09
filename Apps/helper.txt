@@ -1,8 +1,16 @@
 #### To Build:
 
-cd kafka-test
+cd kafka-[consumer/producer]
 mvn clean package
+
 
 #### To Run:
 
-java -cp target/kafka-test-1.0-SNAPSHOT.jar com.test.kafka.App
+java -cp target/kafka-[consumer/producer]-1.0-SNAPSHOT.jar com.poc.kafka.App
+
+
+https://kafka.apache.org/40/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html
+https://kafka.apache.org/documentation/
+https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#setProperty-java.lang.String-java.lang.String-
+https://github.com/insightfulBiscuit
+https://docs.google.com/spreadsheets/d/1B2Qj8HOqI639QTQjg2aQ6mZuXy1PCGABQJ4NrqwvC5Y/edit?gid=2082447327#gid=2082447327
