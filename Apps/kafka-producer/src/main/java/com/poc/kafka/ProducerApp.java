@@ -1,8 +1,8 @@
 package com.poc.kafka;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
@@ -18,6 +18,8 @@ public class ProducerApp {
         props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
+
+        System.out.println("Consumer started. Waiting for messages...");
 
         ProducerRecord<String, String> record = new ProducerRecord<>("quickstart-events", "key", "value");
         
