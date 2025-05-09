@@ -1,9 +1,9 @@
 package com.poc.kafka;
 
-import org.apache.kafka.clients.producer.KafkaProducer;   // Kafka class to create a producer
-import org.apache.kafka.clients.producer.ProducerRecord;  // Kafka class to send a record
-import org.apache.kafka.clients.producer.ProducerConfig;  // Constants for producer configuration
-import org.apache.kafka.common.serialization.StringSerializer;  // Serializer for keys and values
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
@@ -18,8 +18,15 @@ public class ProducerApp {
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
-        ProducerRecord<String, String> record = new ProducerRecord<>("topic", "key", "value");
-        producer.send(record);
+        ProducerRecord<String, String> record = new ProducerRecord<>("quickstart-events", "key", "value");
+        
+        try {
+            producer.send(record);
+            System.out.println("Message sent successfully!");
+        } catch (Exception e) {
+            System.out.println("Message failed to send!");
+            e.printStackTrace();
+        }
 
         producer.flush();
         producer.close();

@@ -13,3 +13,4 @@ bin/kafka-server-start.sh config/server.properties
 
 bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
 # bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+# bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
