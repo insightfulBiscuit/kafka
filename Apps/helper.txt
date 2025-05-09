@@ -1,13 +1,8 @@
-#### To Build:
+#### To Build and Run:
 
 cd kafka-[consumer/producer]
 mvn clean package
 java -jar target/kafka-producer-1.0-SNAPSHOT-jar-with-dependencies.jar
-
-
-#### To Run:
-
-java -cp target/kafka-[consumer/producer]-1.0-SNAPSHOT.jar com.poc.kafka.[Consumer/Producer]App
 
 
 https://kafka.apache.org/40/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html
