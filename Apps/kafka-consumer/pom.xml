@@ -45,7 +45,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.poc.kafka.ProducerApp</mainClass>
+              <mainClass>com.poc.kafka.ConsumerApp</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

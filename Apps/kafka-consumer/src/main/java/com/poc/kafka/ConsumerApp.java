@@ -22,7 +22,7 @@ public class ConsumerApp {
         props.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
-        consumer.subscribe(Collections("quickstart-events"));
+        consumer.subscribe(Collections.singletonList("quickstart-events"));
 
         System.out.println("Consumer started. Waiting for messages...");
 
