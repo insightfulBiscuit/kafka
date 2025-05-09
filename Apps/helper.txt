@@ -1,0 +1,8 @@
+#### To Build:
+
+cd kafka-test
+mvn clean package
+
+#### To Run:
+
+java -cp target/kafka-test-1.0-SNAPSHOT.jar com.test.kafka.App
