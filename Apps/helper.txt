@@ -9,15 +9,6 @@ java -jar target/kafka-producer-1.0-SNAPSHOT-jar-with-dependencies.jar
 mvn clean compile assembly:single
 java -jar kafka-producer-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-
-
-https://kafka.apache.org/40/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html
-https://kafka.apache.org/documentation/
-https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#setProperty-java.lang.String-java.lang.String-
-https://github.com/insightfulBiscuit
-https://docs.google.com/spreadsheets/d/1B2Qj8HOqI639QTQjg2aQ6mZuXy1PCGABQJ4NrqwvC5Y/edit?gid=2082447327#gid=2082447327
-
-
 #### Resource use:
 
 htop
