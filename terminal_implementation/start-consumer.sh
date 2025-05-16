@@ -4,4 +4,4 @@ set -x
 
 cd /opt/kafka
 
-bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic output-topic --from-beginning --bootstrap-server localhost:9092
