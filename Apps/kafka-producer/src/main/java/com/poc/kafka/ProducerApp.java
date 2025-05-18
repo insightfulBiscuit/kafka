@@ -22,7 +22,7 @@ public class ProducerApp {
     public static void main(String[] args) throws InterruptedException, IOException, I2CFactory.UnsupportedBusNumberException{
         Properties props = new Properties();
 
-        props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.33.130:9092");
+        props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.32.72:9092");
         props.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, IntegerSerializer.class.getName());
 

@@ -17,7 +17,7 @@ public class ConsumerApp {
     public static void main(String[] args) {
         Properties props = new Properties();
 
-        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.33.130:9092");
+        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.16.32.72:9092");
         props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, IntegerDeserializer.class.getName());
         props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "my-consumer-group");
