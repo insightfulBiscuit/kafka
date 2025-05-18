@@ -11,6 +11,7 @@ import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
 
 import java.util.Properties;
+import java.time.LocalTime;
 
 import java.lang.InterruptedException;
 import java.io.IOException;
@@ -48,16 +49,17 @@ public class ProducerApp {
             record_2 = new ProducerRecord<>("input-topic", "key2", raw_adc_2);
 
             Thread.sleep(500);
-            System.out.println();
 
             try {
                 producer.send(record_1);
                 producer.send(record_2);
-                System.out.println("Messages sent successfully!");
+                System.out.println("Messages sent successfully! at " + LocalTime.now());
             } catch (Exception e) {
                 System.out.println("Messages failed to send!");
                 e.printStackTrace();
             }
+
+            System.out.println();
         }
         
         producer.flush();

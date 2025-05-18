@@ -7,10 +7,10 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.IntegerDeserializer;
 
-
 import java.util.Properties;
 import java.time.Duration;
 import java.util.Collections;
+import java.time.LocalTime;
 
 
 public class ConsumerApp {
@@ -24,7 +24,7 @@ public class ConsumerApp {
         props.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         KafkaConsumer<String, Double> consumer = new KafkaConsumer<>(props);
-        consumer.subscribe(Collections.singletonList("output-topic"));
+        consumer.subscribe(Collections.singletonList("input-topic"));
 
         System.out.println("Consumer started. Waiting for messages...");
 
@@ -33,6 +33,7 @@ public class ConsumerApp {
             for (ConsumerRecord<String, Double> record : records) {
                 System.out.printf("Received message: key=%s, value=%s, partition=%d, offset=%d%n",
                                   record.key(), record.value(), record.partition(), record.offset());
+                System.out.println("Messages received successfully! at " + LocalTime.now());
             }
         }
     }
